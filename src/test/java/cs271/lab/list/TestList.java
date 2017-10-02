@@ -60,7 +60,7 @@ public class TestList {
     list.add(77);
     list.add(77);
     // TODO fix the expected values in the assertions below DID
-    assertEquals(2, list.size());
+    assertEquals(3, list.size());
     assertEquals(0, list.indexOf(77));
     assertEquals(77, list.get(1).intValue());
     assertEquals(2, list.lastIndexOf(77));
@@ -101,7 +101,7 @@ public class TestList {
     assertEquals(4, list.get(2).intValue());
     assertEquals(77, list.get(3).intValue());
     list.remove(Integer.valueOf(5)); // what does this one do? RE
-    assertEquals(6, list.size());
+    assertEquals(5, list.size());
     assertEquals(1, list.indexOf(77));
     assertEquals(4, list.lastIndexOf(77));
     assertEquals(4, list.get(2).intValue());
@@ -117,17 +117,19 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
-    // TODO using containsAll and Arrays.asList (see above),
-    // 1) assert that list contains all five different numbers added
-    // 2) assert that list does not contain all of 11, 22, and 33
-    fail("Not yet implemented"); // remove this line when done
+    // DONE using containsAll and Arrays.asList (see above),
+    // 1) DONE
+    // 2) DONE
+   assertTrue(list.containsAll(Arrays.asList(33, 77, 44, 55, 66)));
+   assertFalse(list.containsAll(Arrays.asList(11, 22, 33)));
   }
 
   @Test
   public void testAddAll() {
-    // TODO in a single statement using addAll and Arrays.asList,
+    // DONE in a single statement using addAll and Arrays.asList,
     // add items to the list to make the following assertions pass
     // (without touching the assertions themselves)
+    list.addAll(Arrays.asList(33,77,44,77,55,77,66));
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
     assertEquals(77, list.get(1).intValue());

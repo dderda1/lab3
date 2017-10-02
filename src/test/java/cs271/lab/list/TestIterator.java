@@ -20,6 +20,7 @@ public class TestIterator {
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
     // TODO also try with a LinkedList - does it make any difference?
+    //list = new LinkedList<Integer>();
   }
 
   @After
@@ -73,13 +74,14 @@ public class TestIterator {
     final Iterator<Integer> i = list.iterator();
     while (i.hasNext()) {
       if (i.next() == 77) {
-        i.remove(); // TODO what happens if you use list.remove(77)?
+        i.remove(); // DoneO what happens if you use list.remove(77)?It will remove 77 
       }
     }
-    // TODO using assertEquals and Arrays.asList, express which values are left in the list
+    // DONE using assertEquals and Arrays.asList, express which values are left in the list
     // See TestList.java for examples of how to use Arrays.asList; also see the Java Arrays
-    // class for more information
-    fail("Not yet implemented"); // remove this line when done
+    // class for more information LIST SIZE IS 4 BECAUSE 77s were removed
+    assertEquals(4, list.size());
+    assertEquals(Arrays.asList(33, 44, 55, 66), list);
   }
 
   @Test
