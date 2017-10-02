@@ -75,7 +75,7 @@ public class TestIterator {
     final Iterator<Integer> i = list.iterator();
     while (i.hasNext()) {
       if (i.next() == 77) {
-        i.remove(); // DoneO what happens if you use list.remove(77)?It will remove 77 
+        i.remove(); // Done what happens if you use list.remove(77)?It will remove 77 
       }
     }
     // DONE using assertEquals and Arrays.asList, express which values are left in the list
@@ -101,8 +101,11 @@ public class TestIterator {
     // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
     final Iterator<Integer> i = list.iterator();
     while (i.hasNext()) {
-      
+      n = i.next();
+      sum =+ n;
+  }
     assertEquals(61.3, sum / n, 0.1);
     assertEquals(7, n);
-  }
+  
+}
 }
