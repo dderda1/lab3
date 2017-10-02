@@ -10,6 +10,7 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.Arrays;
 
 public class TestIterator {
 
@@ -20,7 +21,7 @@ public class TestIterator {
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
     // TODO also try with a LinkedList - does it make any difference?
-    //list = new LinkedList<Integer>();
+    //list = new LinkedList<Integer>(); didn't do anything
   }
 
   @After
@@ -98,6 +99,9 @@ public class TestIterator {
     // TODO use an iterator and a while loop to compute the average (mean) of the values
     // (defined as the sum of the items divided by the number of items)
     // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
+    final Iterator<Integer> i = list.iterator();
+    while (i.hasNext()) {
+      
     assertEquals(61.3, sum / n, 0.1);
     assertEquals(7, n);
   }

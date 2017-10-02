@@ -1,5 +1,5 @@
 package cs271.lab.list;
-
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
