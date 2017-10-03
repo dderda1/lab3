@@ -12,10 +12,10 @@
 5. *tesIterator list.remove(77) will try the remove the 77th element which doesn't exist so you will get an error
 6. run times overall it takes Linked list a lot more time i.e access
 - size 10: **all in millisecs
- -addRemoveLinkedList 50
- -addRemoveArrayList  42
- -ListAccessArrayList 52
- -ListAccessLinkedList 30
+ - addRemoveLinkedList 50
+ - addRemoveArrayList  42
+ - ListAccessArrayList 52
+ - ListAccessLinkedList 30
 - Size 100
   - addRemoveLinkedList 55
   - addRemoveArrayList 100
